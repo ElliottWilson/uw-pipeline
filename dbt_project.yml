@@ -2,8 +2,9 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'uw-pipeline'
-version: '1.0.0'
+name: 'uw_pipeline'
+version: '1.0'
+config-version: 2
 
 # This setting configures which "profile" dbt uses for this project. For dbt Cloud,
 # you can leave this as "default"
@@ -17,6 +18,7 @@ analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
 macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
 
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
@@ -31,5 +33,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-    base:
-          materialized: table
+    staging:
+        base:
+            materialized: table

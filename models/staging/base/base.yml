@@ -1,0 +1,19 @@
+version: 2
+
+models:
+    - name: base_smart_meters_extract
+      description: "This model shows hourly meter reading"
+      columns:
+          - name: concat(meter_id,meter_read_timestamp)
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: base_weather_extract
+      description: "This model shows hourly meter reading"
+      columns:
+          - name: concat(postcode,date_time)
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
