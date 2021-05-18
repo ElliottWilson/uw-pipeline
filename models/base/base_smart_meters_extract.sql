@@ -1,1 +1,0 @@
-SELECT * FROM `uw-pipeline.uw_raw.smart_meters_extract` LIMIT 1000
