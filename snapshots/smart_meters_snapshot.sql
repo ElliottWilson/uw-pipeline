@@ -4,6 +4,7 @@
         config(
           unique_key='id',  
           strategy='check',
+          target_schema='snapshot',
           check_cols='all'
         )
     }}
