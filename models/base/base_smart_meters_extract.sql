@@ -4,4 +4,4 @@ SELECT
     postcode,
     meter_read_value,
     cast(meter_read_timestamp AS datetime) AS meter_read_timestamp
-FROM `uw-pipeline.uw_raw.smart_meters_extract` 
+FROM  {{ source('raw', 'smart_meters_extract') }} 

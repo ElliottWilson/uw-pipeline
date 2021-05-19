@@ -1,0 +1,18 @@
+version: 2
+
+models:
+    - name: stg_meter_reading_and_weather_by_hour
+      columns:
+          - name: concat(meter_read_date,meter_read_hour,postcode)
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: stg_meter_reading_join_weather_event
+      description: "This model shows hourly meter reading"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null

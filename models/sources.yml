@@ -1,0 +1,10 @@
+version: 2
+sources:
+  
+  - name: raw
+    database: uw-pipeline
+    schema: uw_raw
+    loader: dbt
+    tables:
+      - name: smart_meters_extract
+      - name: weather_extract

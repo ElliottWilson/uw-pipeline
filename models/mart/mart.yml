@@ -1,11 +1,9 @@
-
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
+    - name: meter_metrics_weather_by_month
       columns:
-          - name: id
+          - name: concat(meter_read_month,postcode,weather)
             description: "The primary key for this table"
             tests:
                 - unique
